@@ -381,4 +381,4 @@ Av. Vitacura 5951, 10th Floor, Vitacura, Santiago, Chile
 
 ---
 
-*Last updated: December 2024*
+*Last updated: December 202*
