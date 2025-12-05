@@ -16,13 +16,28 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", message=r".*GroupBy\.apply operated on the grouping columns.*")
 
 # =============================================================================
+# DIRECTORIO BASE DEL PROYECTO
+# =============================================================================
+# Detectar automáticamente el directorio raíz del proyecto
+_THIS_FILE = Path(__file__).resolve()
+PROJECT_ROOT = _THIS_FILE.parent.parent.parent  # src/analisis_em/config.py -> project root
+
+# =============================================================================
+# DIRECTORIOS DE DATOS
+# =============================================================================
+DATA_DIR = PROJECT_ROOT / "data"
+RAW_DATA_DIR = DATA_DIR / "raw"
+POP_DATA_DIR = DATA_DIR / "population"
+GEO_DATA_DIR = DATA_DIR / "geographic"
+
+# =============================================================================
 # ARCHIVOS DE ENTRADA
 # =============================================================================
-EXCEL_FILE = "BBDD EM.xlsx"                                    # Base de datos principal de casos
-INE_POP_FILE = "estimaciones-y-proyecciones-2002-2035-comunas.xlsx"  # Proyecciones INE
-PREV_REGION_FILE = "Previsionporregion.xlsx"                   # Población por previsión y región
-BEN_SYS_FILE = "beneficiariosTramoEtario.xlsx"                 # Beneficiarios por tramo etario
-SHAPEFILE_PATH = "Regional.shp"                                # Shapefile de regiones de Chile
+EXCEL_FILE = RAW_DATA_DIR / "BBDD EM.xlsx"                              # Base de datos principal de casos
+INE_POP_FILE = POP_DATA_DIR / "estimaciones-y-proyecciones-2002-2035-comunas.xlsx"  # Proyecciones INE
+PREV_REGION_FILE = POP_DATA_DIR / "Previsionporregion.xlsx"             # Población por previsión y región
+BEN_SYS_FILE = POP_DATA_DIR / "beneficiariosTramoEtario.xlsx"           # Beneficiarios por tramo etario
+SHAPEFILE_PATH = GEO_DATA_DIR / "Regional.shp"                          # Shapefile de regiones de Chile
 
 # =============================================================================
 # PARÁMETROS TEMPORALES
@@ -81,11 +96,12 @@ plt.rcParams.update({
 # =============================================================================
 # DIRECTORIOS DE SALIDA
 # =============================================================================
+OUTPUT_DIR = PROJECT_ROOT / "output"
+TABLES_DIR = OUTPUT_DIR / "tables"
+FIGURES_DIR = OUTPUT_DIR / "figures"
+
 def get_output_dirs():
     """Crea y retorna los directorios de salida."""
-    outdir = Path("salidas_bdem")
-    outdir.mkdir(exist_ok=True)
-    gdir = outdir / "graficos"
-    gdir.mkdir(exist_ok=True)
-    return outdir, gdir
-
+    TABLES_DIR.mkdir(parents=True, exist_ok=True)
+    FIGURES_DIR.mkdir(parents=True, exist_ok=True)
+    return TABLES_DIR, FIGURES_DIR
