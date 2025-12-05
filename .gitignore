@@ -1,0 +1,64 @@
+# Output directories
+salidas_bdem/
+
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# Temporary files
+~$*.xlsx
+~$*.xls
+*.tmp
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Data files (sensitive - no subir datos reales)
+# BBDD EM.xlsx
+# estimaciones-y-proyecciones-2002-2035-comunas.xlsx
+# beneficiariosTramoEtario.xlsx
+# Previsionporregion.xlsx
+# coordenadas.xlsx
+# fonasa2010-2022.xlsx
+

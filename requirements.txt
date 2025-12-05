@@ -1,0 +1,30 @@
+# Epidemiological Analysis of Multiple Sclerosis in Chile
+# Python dependencies
+
+# Core data manipulation
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Statistical analysis
+scipy>=1.10.0
+statsmodels>=0.14.0
+
+# Visualization
+matplotlib>=3.7.0
+
+# Geographic analysis
+geopandas>=0.13.0
+shapely>=2.0.0
+
+# Excel file handling
+openpyxl>=3.1.0
+xlsxwriter>=3.1.0
+
+# Text normalization
+unidecode>=1.3.0
+
+# Optional: for development
+# pytest>=7.0.0
+# black>=23.0.0
+# flake8>=6.0.0
+
