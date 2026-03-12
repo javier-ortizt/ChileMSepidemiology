@@ -50,6 +50,10 @@ def _fix_region_norm_aliases(s: pd.Series) -> pd.Series:
         "libertador b o'higgins": "libertador bernardo o'higgins",
         "magallanes y la antartica chilena": "magallanes y antartica chilena",
         "aisen gral c ibanez campo": "aysen gralibanez campo",
+        # aliases para Aisén: distintas fuentes producen variantes distintas
+        "aysen gral carlos ibanez campo": "aysen gralibanez campo",
+        "aysen del gral carlos ibanez campo": "aysen gralibanez campo",
+        "aysen general carlos ibanez campo": "aysen gralibanez campo",
     }
     return s.replace(repl)
 

@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated paper and this codebase."
+title: "Epidemiological Analysis of Multiple Sclerosis in Chile"
+type: software
+authors:
+  - family-names: "Valdes"
+    given-names: "Jose M."
+    email: "josemiguelvv@gmail.com"
+  - family-names: "Ortiz"
+    given-names: "Javier"
+  - family-names: "Santibanez"
+    given-names: "Tamara"
+  - family-names: "Galleguillos"
+    given-names: "Lorna"
+abstract: "Analysis code and aggregate public outputs supporting a paper on relapsing-remitting multiple sclerosis in Chile, 2010-2023."
+license: "MIT"
+repository-code: "https://github.com/javier-ortizt/ChileMSepidemiology"
+keywords:
+  - multiple sclerosis
+  - chile
+  - epidemiology
+  - prevalence
+  - incidence
+  - latitude gradient
